@@ -4,22 +4,22 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: "0 3 * * *"     # ежедневно в 03:00 UTC
-  workflow_dispatch:         # запуск вручную
+    - cron: "0 3 * * *"   # ежедневно в 03:00 UTC
+  workflow_dispatch:       # ручной запуск
 
 permissions:
-  contents: write            # нужно для коммита изменений
+  contents: write          # нужно для коммита результата
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Чекаут твоего репозитория
+      # 1) Твой репозиторий
       - name: Checkout self
         uses: actions/checkout@v4
 
-      # 2. Чекаут внешнего репозитория
+      # 2) Внешний репозиторий
       - name: Checkout external repo
         uses: actions/checkout@v4
         with:
@@ -28,8 +28,8 @@ jobs:
           path: external
           fetch-depth: 1
 
-      # 3. Собрать указанные файлы в один и удалить дубликаты
-      - name: Build combined allow-domains file
+      # 3) Сборка списка + удаление дубликатов (без смены порядка)
+      - name: Build combined allow-domains
         shell: bash
         run: |
           set -euo pipefail
@@ -61,37 +61,42 @@ jobs:
           )
 
           outfile="allow-domains"
+          tmpfile="$(mktemp)"
 
-          echo "# Combined allow-domains list" > "$outfile"
-          echo "# Source: itdoginfo/allow-domains (branch: main)" >> "$outfile"
-          echo "# Generated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> "$outfile"
-          echo "# Files:" >> "$outfile"
-          for f in "${files[@]}"; do echo "#  - $f" >> "$outfile"; done
-          echo >> "$outfile"
-
-          tmpfile=$(mktemp)
-
+          # Проверка наличия и склейка
           for f in "${files[@]}"; do
             src="external/$f"
-            if [[ -f "$src" ]]; then
-              cat "$src" >> "$tmpfile"
-              echo >> "$tmpfile"
-            else
-              echo "⚠️  Missing: $src" >&2
+            if [[ ! -f "$src" ]]; then
+              echo "ERROR: missing file: $src" >&2
+              exit 1
             fi
+            cat "$src" >> "$tmpfile"
+            echo >> "$tmpfile"
           done
 
-          # Удаляем дубликаты и пустые строки
-          sort -u "$tmpfile" | sed '/^$/d' >> "$outfile"
+          {
+            echo "# Combined allow-domains list"
+            echo "# Source repo: itdoginfo/allow-domains (branch: main)"
+            echo "# Generated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            echo "# Files order:"
+            for f in "${files[@]}"; do echo "#  - $f"; done
+            echo
+            # Удаляем дубликаты строк, сохраняя первый вхождение и исходный порядок
+            awk '!seen[$0]++' "$tmpfile"
+          } > "$outfile"
 
-          echo "✅ Created $outfile with $(wc -l < "$outfile") lines"
-          rm "$tmpfile"
+          rm -f "$tmpfile"
+          echo "Built $outfile with $(wc -l < "$outfile") lines"
 
-      # 4. Коммит и пуш результата
+      # 4) Коммит и пуш в текущую ветку
       - name: Commit & push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -e
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add allow-domains
-          git diff --quiet && echo "No changes" || git commit -m "Auto-update allow-domains [skip ci]"
-          git push
+
+          git add -f allow-domains
+          git commit -m "Auto-update allow-domains [skip ci]" || echo "No changes to commit"
+          git push origin HEAD:${{ github.ref_name }}
