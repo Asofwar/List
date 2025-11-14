@@ -1,6 +1,6 @@
 # Combined allow-domains list
 # Source repo: itdoginfo/allow-domains (branch: main)
-# Generated: 2025-11-14 03:47:13 UTC
+# Generated: 2025-11-14 17:39:09 UTC
 # Files order:
 #  - Russia/inside-raw.lst
 #  - Categories/hodca.lst
@@ -25,7 +25,7 @@
 #  - Subnets/IPv4/meta.lst
 #  - Subnets/IPv4/ovh.lst
 #  - Subnets/IPv4/telegram.lst
-melonity.gg
+
 .ua
 10minutemail.com
 1337x.to
