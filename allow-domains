@@ -1,6 +1,6 @@
 # Combined allow-domains list
 # Source repo: itdoginfo/allow-domains (branch: main)
-# Generated: 2025-12-21 04:02:29 UTC
+# Generated: 2025-12-22 04:06:54 UTC
 # Files order:
 #  - Russia/inside-raw.lst
 #  - Categories/hodca.lst
@@ -39,6 +39,7 @@
 7tv.app
 7tv.io
 9tv.co.il
+a-vrv.akamaized.net
 abercrombie.com
 abook-club.ru
 academy.terrasoft.ua
@@ -83,6 +84,7 @@ anistars.ru
 annas-archive.org
 ansys.com
 anthropic.com
+any.do
 aol.com
 api.jetbrains.ai
 api.service-kp.com
@@ -94,12 +96,14 @@ arbat.media
 arc.net
 archive.ph
 archiveofourown.org
+arduino.cc
 as6723.net
 assets.heroku.com
 atlassian.com
 atn.ua
 att.com
 attachments.f95zone.to
+atv4.dnskp.cc
 audiobookbay.lu
 autodesk.com
 avira.com
@@ -183,6 +187,7 @@ cnd2exp.online
 cock.li
 code.gist.build
 codeium.com
+codelinaro.org
 coingate.com
 coinpayments.net
 coinsbee.com
@@ -213,6 +218,7 @@ dailylviv.com
 danbooru.donmai.us
 data-cdn.mbamupdates.com
 data.cline.bot
+deckbrew.xyz
 decrypt.day
 deepl.com
 deepstatemap.live
@@ -257,6 +263,8 @@ discours.io
 disctech.com
 disneyplus.com
 docs.liquibase.com
+document360.com
+document360.io
 dorama.live
 doramalive.ru
 doramy.club
@@ -265,6 +273,7 @@ download3.omnissa.com
 doxa.team
 dpidetector.org
 dreamhost.com
+dub.sh
 ducati.com
 dumka.media
 dw.com
@@ -305,6 +314,7 @@ facebook.net
 fansly.com
 fast-torrent.club
 fast.com
+fastpic.org
 fb.com
 fbcdn.net
 fbsbx.com
@@ -361,6 +371,7 @@ gfn.am
 ggpht.com
 ghostrc.game.idtech.services
 gifyu.com
+git.new
 glavred.info
 glavred.net
 global.fncstatic.com
@@ -480,6 +491,8 @@ kavkaz-uzel.eu
 kavkazr.com
 kemono.su
 keysight.com
+kilo.ai
+kilocode.ai
 kino.pub
 kinogo.ec
 kinogo.la
@@ -507,8 +520,10 @@ lantern.io
 ldoceonline.com
 le-production.tv
 leafletjs.com
+legalshield.com
 lgeapi.com
 lgthinq.com
+lib.rus.ec
 libgen.li
 licdn.com
 lidarr.audio
@@ -516,6 +531,7 @@ lifehacker.com
 liga.net
 lightning.ai
 linear.app
+lingq.com
 linkedin.com
 linktr.ee
 livetv.sx
@@ -530,6 +546,7 @@ lostfilm.uno
 lostfilmtv2.site
 lu4.org
 lucid.app
+magaz.global
 mail-api.proton.me
 mailerlite.com
 mailfence.com
@@ -567,6 +584,7 @@ miracleptr.wordpress.com
 mixcloud.com
 modrinth.com
 mongodb.com
+monolisa.dev
 monoprice.com
 more.fm
 moscowtimes.ru
@@ -577,6 +595,7 @@ mullvad.net
 multporn.net
 muscdn.com
 musical.ly
+musicbrainz.org
 musixmatch.com
 mw2.wiki
 myanimelist.net
@@ -598,6 +617,7 @@ netflixinvestor.com
 netflixtechblog.com
 netlify.com
 networksolutions.com
+new.abb.com
 newark.com
 news.google.com
 newsroom.porsche.com
@@ -668,6 +688,8 @@ ovd.legal
 ovd.news
 ovdinfo.org
 ozodi.org
+paddle.com
+paddlestatus.com
 pages.dev
 pandasecurity.com
 pap.pl
@@ -677,6 +699,7 @@ parallels.cn
 parallels.com
 parallels.net
 parallelsaccess.com
+paritydeals.com
 patreon.com
 patriot.dp.ua
 pb.wtf
@@ -710,11 +733,13 @@ pravda.com
 pravda.com.ua
 premierleague.com
 primevideo.com
+primevue.org
 privatekeys.pw
 prnt.sc
 proactivebackend-pa.googleapis.com
 production-openaicom-storage.azureedge.net
 proekt.media
+profitwell.com
 prosleduetmedia.com
 prostovpn.org
 proton.me
@@ -725,11 +750,13 @@ pscp.tv
 psiphon.ca
 public.parsec.app
 qt.io
+qualcomm.com
 quicknode.com
 quora.com
 quora.com.cdn.cloudflare.net
 qwant.com
 r4.err.ee
+radiojar.com
 radiosakharov.org
 radiosvoboda.org
 rbc.ua
@@ -799,6 +826,7 @@ sap.com
 saverudata.net
 sci-hub.se
 sci-hub.st
+scrollrevealjs.org
 scryde.io
 scryde.net
 scryde.ru
@@ -889,6 +917,7 @@ strava.com
 suggestqueries.google.com
 supercell.com
 supersliv.biz
+support.anydesk.com
 support.xerox.com
 surfshark.com
 surveymonkey.com
@@ -898,6 +927,7 @@ svoboda.org
 svoi.kr.ua
 svtv.org
 swagger.io
+swapd.co
 swissinfo.ch
 synoforum.com
 t-invariant.org
@@ -926,6 +956,7 @@ themoviedb.org
 thepiratebay.org
 theporndude.com
 thetruestory.news
+thetvdb.com
 threads.net
 threema.ch
 ti.com
@@ -964,6 +995,7 @@ turbobit.net
 tuta.com
 tuta.io
 tutanota.com
+tvdevinfo.com
 tvfreedom.io
 tvrain.ru
 tvrain.tv
@@ -998,9 +1030,11 @@ unian.ua
 unscreen.com
 unsplash.com
 upwork.com
+urlr.me
 usa.one
 usatoday.com
 usher.ttvnw.net
+v.vrv.co
 vagrantcloud.com
 veeam.com
 verstka.media
@@ -1015,6 +1049,7 @@ visualcapitalist.com
 vmware.com
 vndb.org
 voanews.com
+vod-fy.crunchyrollcdn.com
 voidboost.cc
 volkswagen-classic-parts.com
 vot-tak.tv
@@ -1051,7 +1086,9 @@ x.com
 xhamster.com
 xhamsterlive.com
 xhcdn.com
+xiaomi.eu
 xnxx-cdn.com
+xnxx-ru.com
 xnxx.com
 xnxx.net
 xnxx.tv
@@ -1132,8 +1169,16 @@ crdroid.net
 russianfood.com
 wwnd.space
 smods.ru
-fastpic.org
 drpool.io
+kyoceradocumentsolutions.com
+eaaccounts.akamaized.net
+friendlyelec.com
+discourse-cdn.com
+xraycore.org
+opensubtitles.org
+localsend.org
+adbappcontrol.com
+tunemymusic.com
 hetzner.cloud
 desec.io
 izzysoft.de
@@ -1163,6 +1208,13 @@ tuyain.com
 iot334.com
 wbagora.com
 wbinsights.com
+capcutstatic.com
+capcutvod.com
+huggingface.co
+cdn-lfs.hf.co
+cdn-lfs.huggingface.co
+cdn-lfs-us-1.hf.co
+cdn-lfs-eu-1.hf.co
 files.manus.cdn
 dyson.com 
 one.one.one.one
@@ -1205,6 +1257,7 @@ jules.google.com
 labs.google
 aisandbox-pa.googleapis.com
 stitch.withgoogle.com
+robinfrontend-pa.googleapis.com
 googleplay.com
 play-fe.googleapis.com
 play-games.googleusercontent.com
@@ -1248,24 +1301,67 @@ usercontent.dev
 31.13.24.0/21
 31.13.64.0/18
 45.64.40.0/22
-57.141.0.0/20
+57.141.0.0/24
+57.141.2.0/23
+57.141.4.0/22
+57.141.8.0/21
+57.141.16.0/23
 57.144.0.0/14
 66.220.144.0/20
 69.63.176.0/20
 69.171.224.0/19
 74.119.76.0/22
 102.132.96.0/20
+102.132.112.0/24
+102.132.114.0/23
+102.132.116.0/23
+102.132.119.0/24
+102.132.120.0/23
+102.132.123.0/24
+102.132.125.0/24
+102.132.126.0/23
+102.221.188.0/22
 103.4.96.0/22
 129.134.0.0/17
+129.134.130.0/24
+129.134.135.0/24
+129.134.136.0/22
+129.134.140.0/24
+129.134.143.0/24
+129.134.144.0/24
+129.134.147.0/24
+129.134.148.0/23
+129.134.154.0/23
+129.134.156.0/22
+129.134.160.0/22
+129.134.164.0/23
+129.134.168.0/21
+129.134.176.0/20
+129.134.194.0/24
 157.240.0.0/17
+157.240.128.0/23
+157.240.131.0/24
+157.240.132.0/24
+157.240.134.0/24
+157.240.136.0/23
+157.240.156.0/22
+157.240.169.0/24
+157.240.175.0/24
+157.240.177.0/24
+157.240.179.0/24
+157.240.181.0/24
+157.240.182.0/23
+157.240.184.0/21
 157.240.192.0/18
 163.70.128.0/17
 163.77.132.0/23
-163.77.136.0/23
+163.77.137.0/24
+163.114.128.0/20
 173.252.64.0/18
 179.60.192.0/22
 185.60.216.0/22
 185.89.216.0/22
+199.201.64.0/22
 204.15.20.0/22
 173.245.48.0/20
 103.21.244.0/22
@@ -1710,6 +1806,7 @@ usercontent.dev
 5.83.153.0/24
 5.135.0.0/16
 5.144.182.0/24
+5.175.168.0/24
 5.175.195.0/24
 5.178.106.0/24
 5.178.110.0/24
@@ -1739,6 +1836,7 @@ usercontent.dev
 31.24.81.0/24
 31.41.37.0/24
 31.56.52.0/22
+31.56.112.0/24
 31.56.219.0/24
 31.57.161.0/24
 31.57.199.0/24
@@ -1790,9 +1888,7 @@ usercontent.dev
 46.203.116.0/22
 46.203.128.0/22
 46.203.140.0/22
-46.203.188.0/24
 46.236.211.0/24
-46.236.214.0/24
 46.244.32.0/20
 50.114.91.0/24
 51.38.0.0/16
@@ -1814,7 +1910,6 @@ usercontent.dev
 57.128.0.0/15
 57.130.0.0/16
 57.131.0.0/17
-62.72.191.0/24
 62.122.126.0/24
 62.141.62.0/24
 63.251.117.0/24
@@ -1861,6 +1956,7 @@ usercontent.dev
 82.38.60.0/24
 82.38.62.0/24
 82.38.82.0/24
+82.38.171.0/24
 82.39.108.0/24
 82.39.138.0/24
 82.117.230.0/23
@@ -1889,6 +1985,7 @@ usercontent.dev
 88.216.221.0/24
 88.218.34.0/24
 89.19.44.0/24
+89.213.105.0/24
 89.251.28.0/24
 91.90.88.0/21
 91.121.0.0/16
@@ -1921,6 +2018,7 @@ usercontent.dev
 95.81.72.0/22
 95.169.162.0/24
 96.62.105.0/24
+96.62.231.0/24
 103.5.12.0/22
 103.82.16.0/22
 103.167.178.0/23
@@ -1948,6 +2046,7 @@ usercontent.dev
 117.18.104.0/24
 123.100.227.0/24
 128.0.118.0/24
+130.49.217.0/24
 135.125.0.0/16
 135.148.0.0/16
 136.0.248.0/24
@@ -1955,9 +2054,9 @@ usercontent.dev
 137.83.50.0/24
 138.249.2.0/24
 139.99.0.0/16
-140.150.238.0/23
 141.11.39.0/24
 141.11.74.0/23
+141.11.76.0/24
 141.94.0.0/15
 141.227.128.0/21
 141.227.136.0/22
@@ -1991,6 +2090,7 @@ usercontent.dev
 143.14.231.0/24
 143.20.66.0/24
 143.20.195.0/24
+143.20.223.0/24
 144.2.32.0/19
 144.172.73.0/24
 144.217.0.0/16
@@ -1999,9 +2099,9 @@ usercontent.dev
 146.19.9.0/24
 146.59.0.0/16
 146.103.10.0/24
-147.125.198.0/24
 147.135.0.0/16
 148.113.0.0/18
+148.113.72.0/24
 148.113.128.0/17
 148.222.40.0/22
 148.222.120.0/22
@@ -2063,6 +2163,7 @@ usercontent.dev
 172.83.201.0/24
 176.31.0.0/16
 178.32.0.0/15
+178.93.124.0/24
 178.95.186.0/24
 180.131.145.0/24
 180.149.33.0/24
@@ -2097,6 +2198,7 @@ usercontent.dev
 185.226.181.0/24
 185.228.207.0/24
 185.241.50.0/23
+185.251.234.0/24
 185.255.28.0/24
 188.68.164.0/22
 188.165.0.0/16
@@ -2115,7 +2217,6 @@ usercontent.dev
 192.207.105.0/24
 192.227.203.0/24
 192.240.152.0/21
-193.8.236.0/24
 193.17.223.0/24
 193.32.204.0/24
 193.32.207.0/24
@@ -2136,6 +2237,7 @@ usercontent.dev
 194.76.173.0/24
 194.87.205.0/24
 194.147.159.0/24
+194.150.165.0/24
 194.156.227.0/24
 194.164.230.0/24
 195.20.146.0/24
@@ -2172,7 +2274,6 @@ usercontent.dev
 209.112.80.0/22
 209.126.71.0/24
 209.151.124.0/24
-209.178.202.0/24
 209.251.24.0/24
 212.24.127.0/24
 212.38.79.0/24
