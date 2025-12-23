@@ -1,6 +1,6 @@
 # Combined allow-domains list
 # Source repo: itdoginfo/allow-domains (branch: main)
-# Generated: 2025-12-22 04:06:54 UTC
+# Generated: 2025-12-23 04:01:15 UTC
 # Files order:
 #  - Russia/inside-raw.lst
 #  - Categories/hodca.lst
@@ -1344,6 +1344,7 @@ usercontent.dev
 157.240.132.0/24
 157.240.134.0/24
 157.240.136.0/23
+157.240.139.0/24
 157.240.156.0/22
 157.240.169.0/24
 157.240.175.0/24
@@ -1355,7 +1356,7 @@ usercontent.dev
 157.240.192.0/18
 163.70.128.0/17
 163.77.132.0/23
-163.77.137.0/24
+163.77.136.0/23
 163.114.128.0/20
 173.252.64.0/18
 179.60.192.0/22
