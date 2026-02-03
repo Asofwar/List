@@ -72,8 +72,10 @@ jobs:
             cat "$src" >> "$tmpfile"
             echo >> "$tmpfile"
           done
-
+          # Убираем UTF-8 BOM + leading мусор
+          sed -i '1s/^\xEF\xBB\xBF//' "$tmpfile"
           python3 - "$tmpfile" "$outfile" "$ext_sha" <<'PY'
+          
           import re, sys, ipaddress, pathlib
 
           tmp = pathlib.Path(sys.argv[1])
