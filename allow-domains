@@ -1,32 +1,3 @@
-# Combined allow-domains list
-# Source repo: itdoginfo/allow-domains (branch: main, sha: 64f9eb0)
-# Generated: 2026-02-03 14:10:58 UTC
-# Files order:
-#  - Russia/inside-raw.lst
-#  - Categories/hodca.lst
-#  - Categories/anime.lst
-#  - Categories/geoblock.lst
-#  - Services/cloudflare.lst
-#  - Services/cloudfront.lst
-#  - Services/discord.lst
-#  - Services/google_ai.lst
-#  - Services/google_play.lst
-#  - Services/hdrezka.lst
-#  - Services/meta.lst
-#  - Services/telegram.lst
-#  - Services/tiktok.lst
-#  - Subnets/IPv4/Discord.lst
-#  - Subnets/IPv4/Meta.lst
-#  - Subnets/IPv4/cloudflare.lst
-#  - Subnets/IPv4/cloudfront.lst
-#  - Subnets/IPv4/digitalocean.lst
-#  - Subnets/IPv4/discord.lst
-#  - Subnets/IPv4/hetzner.lst
-#  - Subnets/IPv4/meta.lst
-#  - Subnets/IPv4/ovh.lst
-#  - Subnets/IPv4/telegram.lst
-
-.ua
 10minutemail.com
 1337x.to
 24.kg
@@ -1218,7 +1189,7 @@ maximoff.su
 strapi.io
 coderabbit.ai
 storybook.js.org
-aniliberty.top 
+aniliberty.top
 libria.fun
 userbenchmark.com
 plantuml.com
@@ -1234,7 +1205,7 @@ joeysretrohandhelds.com
 customfw.xyz
 youngliving.com
 gopro.com
-artixlinux.org 
+artixlinux.org
 beatsaver.com
 beatmods.com
 bsmanager.io
