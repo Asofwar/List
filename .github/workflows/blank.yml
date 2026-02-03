@@ -30,7 +30,7 @@ jobs:
           path: external
           fetch-depth: 1
 
-      - name: Build combined allow-domains
+      - name: Build combined allow-domains (1 file, ignore invalid)
         shell: bash
         run: |
           set -euo pipefail
@@ -61,40 +61,78 @@ jobs:
             "Subnets/IPv4/telegram.lst"
           )
 
-          outfile="allow-domains"
           tmpfile="$(mktemp)"
+          outfile="allow-domains"
 
-          # commit SHA внешнего репо (чтобы было понятно, что именно подтянули)
-          ext_sha="$(git -C external rev-parse --short HEAD)"
-
-          # Склейка + базовая нормализация:
-          # - убираем CR (\r)
-          # - убираем пустые строки
-          # - (опционально) можно отфильтровать комментарии: /^[[:space:]]*#/ {next}
+          # Склейка строго в заданном порядке
           for f in "${files[@]}"; do
             src="external/$f"
             [[ -f "$src" ]] || { echo "ERROR: missing file: $src" >&2; exit 1; }
-
-            sed -e 's/\r$//' "$src" \
-              | awk 'NF { print }' \
-              >> "$tmpfile"
+            cat "$src" >> "$tmpfile"
+            echo >> "$tmpfile"
           done
 
-          {
-            echo "# Combined allow-domains list"
-            echo "# Source repo: itdoginfo/allow-domains (branch: main, sha: ${ext_sha})"
-            echo "# Generated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-            echo "# Files order:"
-            for f in "${files[@]}"; do echo "#  - $f"; done
-            echo
-            # Дедуп строк с сохранением порядка
-            awk '!seen[$0]++' "$tmpfile"
-          } > "$outfile"
+          # Нормализация + дедуп + "мягкая" валидация (invalid игнорируем)
+          python3 - <<'PY'
+          import re, sys, ipaddress, pathlib
+
+          tmp = pathlib.Path(sys.argv[1])
+          out = pathlib.Path(sys.argv[2])
+
+          # Домен:
+          # - допускаем ведущую точку (".ua")
+          # - ASCII/IDN punycode ("xn--")
+          domain_re = re.compile(
+              r"^\.?("
+              r"(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+"
+              r"(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})"
+              r")$",
+              re.IGNORECASE
+          )
+
+          def is_ip_or_cidr(s: str) -> bool:
+              try:
+                  if "/" in s:
+                      ipaddress.ip_network(s, strict=False)
+                  else:
+                      ipaddress.ip_address(s)
+                  return True
+              except Exception:
+                  return False
+
+          seen = set()
+          result = []
+          invalid = []
+
+          for idx, raw in enumerate(tmp.read_text(encoding="utf-8", errors="replace").splitlines(), start=1):
+              s = raw.replace("\r", "").strip()
+
+              # пропускаем пустые и комменты
+              if not s or s.startswith("#"):
+                  continue
+
+              # дедуп (сохраняем первое вхождение)
+              if s in seen:
+                  continue
+
+              ok = (domain_re.match(s) is not None) or is_ip_or_cidr(s)
+              if not ok:
+                  invalid.append((idx, raw))
+                  continue
+
+              seen.add(s)
+              result.append(s)
+
+          out.write_text("\n".join(result) + "\n", encoding="utf-8")
+
+          print(f"OK: wrote {len(result)} valid entries to {out}")
+          if invalid:
+              print(f"WARNING: ignored {len(invalid)} invalid lines (showing up to 50):")
+              for ln, val in invalid[:50]:
+                  print(f"  {ln}: {val!r}")
+          PY "$tmpfile" "$outfile"
 
           rm -f "$tmpfile"
-
-          echo "Built $outfile"
-          echo "Lines: $(wc -l < "$outfile")"
 
       - name: Commit & push (only if changed)
         env:
