@@ -1,6 +1,6 @@
 # Combined allow-domains list
-# Source repo: itdoginfo/allow-domains (branch: main)
-# Generated: 2026-02-03 04:51:26 UTC
+# Source repo: itdoginfo/allow-domains (branch: main, sha: 64f9eb0)
+# Generated: 2026-02-03 14:10:58 UTC
 # Files order:
 #  - Russia/inside-raw.lst
 #  - Categories/hodca.lst
@@ -1151,7 +1151,6 @@ zedge.net
 zendesk.com
 zerkalo.io
 zona.media
-
 cloudflare.com
 artstation.com
 bitru.org
